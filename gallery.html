@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - 8G Academy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <header class="header-content">
+            <h1 class="title">Galeri</h1>
+
+            <!-- Search form -->
+            <form action="search.php" method="get" class="search-form">
+                <input type="search" name="q" placeholder="search">
+                <button type="submit">Search</button>
+            </form>
+
+        </header>
+        <!-- Navigation menu -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="services.html">Hizmetlerimiz</a></li>
+                <li><a href="support.html">Destek</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="news.html">Etkinlikler</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section for displaying the gallery -->
+    <section class="Galeri">
+        <h2>Galeri</h2>
+        <div class="photos" id="photo-Galeri">
+        </div>
+    </section>
+    <!-- JavaScript for dynamically adding gallery photos -->
+    <script>
+        const Galeri = document.getElementById('photo-Galeri');
+        const photoList = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg', 'photo5.jpg', 'photo6.jpg', 'photo7.jpg', 'photo8.jpg', 'photo9.jpg', 'photo10.jpg', 'photo11.jpg', 'photo12.jpg', 'photo13.jpg', 'photo14.jpg'];
+
+        photoList.forEach(function (photo) {
+            const img = document.createElement('img');
+            img.src = photo;
+            Galeri.appendChild(img);
+        });
+    </script>
+
+    <footer>
+        <!-- Copyright information -->
+        <p>&copy; 2024 8G Academy. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
